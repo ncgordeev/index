@@ -1,0 +1,146 @@
+:root {
+    --primary-color: #f47322;
+    --second-color: #97979f;
+    --second-text-color: #ffffff;
+    --main-text-color: #000000;
+    --description-color: #b9b9be;
+}
+
+html {
+    font: 400 16px/24px 'Roboto', sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.container {
+    max-width: 1194px;
+    margin: 0 auto;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+}
+
+.search {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+    position: relative;
+    max-width: 620px;
+    height: 49px;
+    margin-left: 76px;
+    padding: 0 0 0 20px;
+    background: rgba(238, 238, 238, 0.71);
+    border-radius: 10px;
+}
+
+.search__input {
+    width: 100%;
+    border: none;
+    background-color: transparent;
+}
+
+/*Скрытие стандартного крестика в поле ввода*/
+input[type=text]::-ms-clear {
+    display: none;
+    width: 0;
+    height: 0;
+}
+
+input[type=text]::-ms-reveal {
+    display: none;
+    width: 0;
+    height: 0;
+}
+
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+    display: none;
+}
+
+.search__input:focus {
+    outline: none;
+}
+
+.search__button {
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+    padding-right: 18px;
+    padding-left: 18px;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+}
+
+.search__icon {
+    width: 22px;
+    height: 22px;
+}
+
+.auth {
+    margin-left: auto;
+}
+
+.auth__link {
+    display: inline-flex;
+    padding: .8125rem 1.875rem;
+    background-color: #ebebeb;
+    border-radius: 50px;
+    color: var(--main-text-color);
+    font-size: .875rem;
+    text-decoration: none;
+    transition: .3s;
+}
+
+.auth__link:hover {
+    opacity: .8;
+}
+
+.cart {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 49px;
+    height: 49px;
+    border-radius: 50%;
+    background: var(--primary-color);
+    transition: .3s;
+}
+
+.cart_marg {
+    margin-left: 31px;
+}
+
+.cart__icon {
+    width: 24px;
+    height: 24px;
+    fill: var(--second-text-color);
+}
+
+.cart:hover {
+    opacity: .8;
+}
+
+.cart__counter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    left: 32px;
+    top: 36px;
+    border-radius: 50%;
+    color: var(--main-text-color);
+    font-size: .5rem;
+    width: 18px;
+    height: 18px;
+    background: #ffaf19;
+    text-decoration: none;
+}
